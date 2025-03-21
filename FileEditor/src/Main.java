@@ -28,6 +28,10 @@ public class Main {
             String[] words = input.split(" ");
             switch(words[0]){
                 case "print":
+                    if(words.length > 1){
+                        System.out.println("Invalid input: " + input);
+                        break;
+                    }
                     System.out.println(text);
                     break;
                 case "concat":
@@ -36,6 +40,10 @@ public class Main {
                     }
                     break;
                 case "exit":
+                    if(words.length > 1){
+                        System.out.println("Invalid input: " + input);
+                        break;
+                    }
                     running = false;
                     break;
                 default:
